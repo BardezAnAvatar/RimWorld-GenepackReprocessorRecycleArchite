@@ -17,6 +17,12 @@
 		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.5.4409" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Reference Include="GenepackReprocessor">
+	    <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\workshop\content\294100\3277539761\1.6\Assemblies\GenepackReprocessor.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
 	<!-- Output -->
 	<PropertyGroup>
 		<DebugType>none</DebugType>
