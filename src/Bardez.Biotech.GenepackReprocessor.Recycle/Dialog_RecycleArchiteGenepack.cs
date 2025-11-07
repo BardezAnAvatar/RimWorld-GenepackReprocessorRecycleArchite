@@ -9,6 +9,7 @@ using Verse.Sound;
 
 namespace Bardez.Biotech.GenepackReprocessor.Recycle
 {
+    /// <summary>Renders a UI dialog in which user will select archite genes for recycling</summary>
     public class Dialog_RecycleArchiteGenepack : GeneCreationDialogBase
     {
         protected Genepack SelectedGenepack => this.selectedGenepack;
@@ -28,9 +29,7 @@ namespace Bardez.Biotech.GenepackReprocessor.Recycle
             this.geneSeparator = geneSeparator;
             this.libraryGenepacks.AddRange(geneSeparator.GetGenepacks(true, true));
             this.unpoweredGenepacks.AddRange(geneSeparator.GetGenepacks(false, true));
-            // ISSUE: cast to a reference type
-            // ISSUE: explicit reference operation
-            this.searchWidgetOffsetX = Convert.ToSingle((GeneCreationDialogBase.ButSize).x * 2.0 + 4.0);
+            this.searchWidgetOffsetX = GeneCreationDialogBase.ButSize.x * 2.0f + 4.0f;
             GeneUtility.SortGenepacks(this.libraryGenepacks);
             GeneUtility.SortGenepacks(this.unpoweredGenepacks);
         }
