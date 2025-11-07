@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+		<AssemblyName>GenepackReprocessor.Recycle</AssemblyName>
+		<OutputType>Library</OutputType>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<LangVersion>latest</LangVersion>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+		<Configurations>Release;Debug</Configurations>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Lib.Harmony" Version="2.3.6" ExcludeAssets="runtime" />
+		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.5.4409" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="GenepackReprocessor">
+	    <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\workshop\content\294100\3277539761\1.6\Assemblies\GenepackReprocessor.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+	<!-- Output -->
+	<PropertyGroup>
+		<DebugType>none</DebugType>
+		<OutputPath>..\..\1.6\Assemblies\</OutputPath>
+		<Optimize>true</Optimize>
+		<DefineConstants>TRACE</DefineConstants>
+	</PropertyGroup>
+
+</Project>
