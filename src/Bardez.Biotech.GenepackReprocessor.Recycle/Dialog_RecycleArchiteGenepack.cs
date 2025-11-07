@@ -33,11 +33,11 @@ namespace Bardez.Biotech.GenepackReprocessor.Recycle
             GeneUtility.SortGenepacks(this.unpoweredGenepacks);
         }
 
-        protected override string Header => throw new NotImplementedException();
+        protected override string Header => "Bardez.Biotech.GenepackReprocessor.Recycle_Header".Translate();
 
-        protected override string AcceptButtonLabel => throw new NotImplementedException();
+        protected override string AcceptButtonLabel => "Bardez.Biotech.GenepackReprocessor.Recycle_Accept".Translate();
 
-        public override string CloseButtonText => throw new NotImplementedException();
+        public override string CloseButtonText => "Bardez.Biotech.GenepackReprocessor.Recycle_Close".Translate();
 
         protected override List<GeneDef> SelectedGenes => throw new NotImplementedException();
 
