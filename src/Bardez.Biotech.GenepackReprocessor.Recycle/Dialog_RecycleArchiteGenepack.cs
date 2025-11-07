@@ -39,7 +39,19 @@ namespace Bardez.Biotech.GenepackReprocessor.Recycle
 
         public override string CloseButtonText => "Bardez.Biotech.GenepackReprocessor.Recycle_Close".Translate();
 
-        protected override List<GeneDef> SelectedGenes => throw new NotImplementedException();
+        protected override List<GeneDef> SelectedGenes
+        {
+            get
+            {
+                this.tmpGenes.Clear();
+                foreach (GeneSetHolderBase selectedGenepack in this.selectedGenepacks)
+                {
+                    foreach (GeneDef geneDef in selectedGenepack.GeneSet.GenesListForReading)
+                        this.tmpGenes.Add(geneDef);
+                }
+                return this.tmpGenes;
+            }
+        }
 
         protected override void Accept()
         {
